@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>World Clock & Timer</title>
+</head>
+<body>
+    <div class="container">
+        <div id="worldClock" class="card">
+            <label for="country">Choisir le pays :</label>
+            <select id="country" onchange="updateTime()">
+                <option value="GMT">GMT</option>
+                <option value="Africa/Tunis">Tunisia</option>
+                <option value="Africa/Algiers">Algeria</option>
+                <option value="Africa/Tripoli">Libya</option>
+                <option value="Africa/Casablanca">Morocco</option>
+                <!-- Add more countries as needed -->
+            </select>
+            <div id="current-time"></div>
+        </div>
+
+        <div id="timer" class="card">
+            <label for="minutes">Minuteur (minutes) :</label>
+            <input type="number" id="minutes" placeholder="Entrez la durée en minutes">
+            <button onclick="startTimer()">Démarrer le minuteur</button>
+            <div id="timer-display" class="timer-display"></div>
+        </div>
+
+        <div id="alarm" class="card">
+            <button onclick="setAlarm()">Définir l'alarme</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
